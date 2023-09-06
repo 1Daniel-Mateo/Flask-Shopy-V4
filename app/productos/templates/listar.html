@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+       <h1>😆Lista de productos😆</h1>
+       <table class="table table-hover">
+          <thead>
+            <tr>
+                <th>nombre</th>
+                <th>precio</th>
+                <th>imagen</th>
+            </tr>
+          </thead>
+            <tbody>
+                {% for producto in productos %}
+                <tr>
+                    <td>{{producto.name}}</td>
+                    <td>{{producto.precio}}</td>
+                    <td>
+                        <img src="imagenes/{{producto.imagen}}" alt="" width="200px" height="150px">
+                    </td>
+                </tr>
+                {% endfor%}
+
+            </tbody>
+       </table>
+{% endblock%}
